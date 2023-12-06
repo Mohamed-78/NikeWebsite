@@ -1,4 +1,4 @@
-export const Button = ({label, iconURL, backgroundColor, borderColor, textColor}) => {
+export const Button = ({label, iconURL, backgroundColor, borderColor, textColor, fullWidth}) => {
   return (
     <button className={`flex justify-center items-center 
       gap-2 px-7 py-4 border font-montserrat text-lg leading-none
@@ -7,7 +7,7 @@ export const Button = ({label, iconURL, backgroundColor, borderColor, textColor}
         ? `${backgroundColor} $
         {textColor} ${borderColor}`
         : "bg-coral-red text-white border-coral-red"
-        } rounded-full w-full"}`}
+        } rounded-full ${fullWidth && 'w-full'}"}`}
       >
       {label}
       {iconURL && <img src={iconURL} className="ml-2 rounded-full w-5 h-5"/>}
